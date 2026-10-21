@@ -1,16 +1,40 @@
-# React + Vite
+# Wildflower Finder
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+A React and Vite app for browsing native wildflowers of Rabun County, Georgia. Search by name, browse photo cards, and open details showing bloom season, sunlight, water needs, planting effort, maintenance effort, and notes.
 
-Currently, two official plugins are available:
+The browser loads the catalog from `public/wildflowers.json`. The app browses catalog records; photograph-based identification is not implemented.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+## Run locally
 
-## React Compiler
+Install Node.js and npm, then run:
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+```sh
+npm ci
+npm run dev
+```
 
-## Expanding the ESLint configuration
+Open the local URL printed by Vite.
 
-If you are developing a production application, we recommend using TypeScript with type-aware lint rules enabled. Check out the [TS template](https://github.com/vitejs/vite/tree/main/packages/create-vite/template-react-ts) for information on how to integrate TypeScript and [`typescript-eslint`](https://typescript-eslint.io) in your project.
+## Build and checks
+
+```sh
+npm run build
+npm run preview
+npm run lint
+```
+
+No automated test command is defined in `package.json`.
+
+## Project layout
+
+- `src/App.jsx`: catalog loading, name search, cards, and detail views.
+- `src/App.css` and `src/index.css`: presentation.
+- `public/`: catalog JSON and public assets.
+- `scripts/`: supporting data scripts.
+- [SPEC.md](SPEC.md): project specification.
+
+Keep catalog fields aligned with the UI when editing data. Image availability and botanical data quality were not verified in this documentation review.
+
+## How this was built
+
+Documentation reviewed with OpenAI Codex assistance against the application source.
